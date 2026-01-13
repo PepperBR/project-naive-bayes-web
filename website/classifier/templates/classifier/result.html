@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Análise</title>
+    {% load static %}
+    <link rel="icon" type="image/png" href="{% static 'classifier/images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'classifier/css/result.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado da Análise</h1>
+        
+        <div class="result">
+            <p>A imagem foi classificada como:</p>
+            <h2>{{ prediction }}</h2>
+        </div>
+        
+        <a href="{% url 'classifier:index' %}">
+            <button>Analisar Nova Imagem</button>
+        </a>
+    </div>
+</body>
+</html>
